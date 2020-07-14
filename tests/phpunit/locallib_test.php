@@ -111,6 +111,8 @@ class auth_saml2_locallib_testcase extends advanced_testcase {
                 $_GET['SimpleSAML_Auth_State_exceptionId'] = '...';
             } else if ($param == 'post') {
                 $_SERVER['REQUEST_METHOD'] = 'POST';
+                $_POST['username'] = 'testuser';
+                $_POST['password'] = 'testpass';
             } else {
                 $_GET['saml'] = $param;
             }
